@@ -7,6 +7,7 @@ interface Ticket {
   day: string
   month: string
   link: string
+  estreno?: boolean
 }
 
 const tickets: Ticket[] = [
@@ -14,6 +15,7 @@ const tickets: Ticket[] = [
     day: "8",
     month: "NOV",
     link: "https://www.boletera.com.ar/vernissage/8nov",
+    estreno: true,
   },
   {
     day: "9",
