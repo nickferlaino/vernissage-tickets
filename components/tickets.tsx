@@ -33,6 +33,7 @@ const tickets: Ticket[] = [
 ]
 
 export function Tickets() {
+
   return (
 
     <div id="tickets-section" className="py-24 bg-[#EEEBE8]">
@@ -49,7 +50,7 @@ export function Tickets() {
         />
         <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-4">
           {tickets.map((ticket, index) => (
-            <div key={index} className="p-4 w-full h-80 gap-4 flex flex-col justify-between border border-[#B4ABA2]">
+            <div key={index} className="relative p-4 w-full h-80 gap-4 flex flex-col justify-between border border-[#B4ABA2]">
               <div className="flex flex-col items-start pt-2">
                 <p className="text-8xl font-heading font-medium text-gray-900">
                   {ticket.day}
@@ -58,6 +59,11 @@ export function Tickets() {
                   {ticket.month} 
                 </p>
                 <p className="test-sm text-gray-500 pt-2">20:30 HS</p>
+                {ticket.estreno && (
+                  <span className="absolute top-6 right-3 text-sm font-medium text-white bg-[#DD480D] px-4 py-1 rotate-[15deg]">
+                    ESTRENO
+                  </span>
+                )}
               </div>
 
               <Button
