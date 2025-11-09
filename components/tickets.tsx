@@ -16,6 +16,7 @@ const tickets: Ticket[] = [
     month: "NOV",
     link: "https://www.boletera.com.ar/vernissage/8nov",
     estreno: true,
+    soldOut: true,
   },
   {
     day: "9",
