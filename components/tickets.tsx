@@ -30,9 +30,9 @@ const tickets: Ticket[] = [
     link: "https://www.boletera.com.ar/vernissage/15nov",
   },
   {
-    day: "23",
+    day: "22",
     month: "NOV",
-    link: "https://www.boletera.com.ar/vernissage/23nov",
+    link: "https://www.boletera.com.ar/vernissage/22nov",
   },
 ]
 
@@ -68,12 +68,18 @@ export function Tickets() {
                     ESTRENO
                   </span>
                 )}
+                {ticket.soldOut && (
+                  <span className="absolute bottom-8 md:bottom-10 right-6 md:right-9 text-sm font-medium text-white bg-gray-900 px-4 md:px-8 py-2 -rotate-[8deg] z-10">
+                    SOLD OUT
+                  </span>
+                )}
               </div>
 
               <Button
                 variant="outline"
-                className="w-full font-serif font-medium text-base py-6 bg-transparent border-[#989693] text-[#423324] hover:bg-gray-900 hover:text-white rounded-full"
-                onClick={() => window.open(ticket.link, '_blank')}
+                disabled={ticket.soldOut}
+                className="w-full font-serif font-medium text-base py-6 bg-transparent border-[#989693] text-[#423324] hover:bg-gray-900 hover:text-white rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
+                onClick={() => !ticket.soldOut && window.open(ticket.link, '_blank')}
               >
                 COMPRAR
               </Button>
