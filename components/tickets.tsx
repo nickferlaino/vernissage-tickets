@@ -8,6 +8,7 @@ interface Ticket {
   month: string
   link: string
   estreno?: boolean
+  soldOut?: boolean
 }
 
 const tickets: Ticket[] = [
