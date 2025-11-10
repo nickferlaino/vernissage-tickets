@@ -23,6 +23,7 @@ const tickets: Ticket[] = [
     day: "9",
     month: "NOV",
     link: "https://www.boletera.com.ar/vernissage/9nov",
+    soldOut: true,
   },
   {
     day: "15",
@@ -30,9 +31,9 @@ const tickets: Ticket[] = [
     link: "https://www.boletera.com.ar/vernissage/15nov",
   },
   {
-    day: "22",
+    day: "23",
     month: "NOV",
-    link: "https://www.boletera.com.ar/vernissage/22nov",
+    link: "https://www.boletera.com.ar/vernissage/23nov",
   },
 ]
 
